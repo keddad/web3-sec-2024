@@ -8,7 +8,7 @@ async function main() {
         await deployer.getAddress()
     );
 
-    const Token = await ethers.getContractFactory("KeddadERC20");
+    const Token = await ethers.getContractFactory("KeddadERC1155");
     const token = await Token.deploy(deployer.address);
 
     console.log("Token address:", await token.getAddress());
